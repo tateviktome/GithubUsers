@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "empty-avatar-700x480.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
