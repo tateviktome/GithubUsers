@@ -43,6 +43,8 @@ final class UsersViewController: UIViewController {
         viewModel.items.observe(on: self) { [weak self] in
             self?.items = $0
             self?.tableView.reloadData()
+            
+            self?.tableView.isHidden = self?.items.isEmpty == true
         }
         viewModel.query.observe(on: self) { [weak self] in self?.updateSearchController(query: $0) }
         viewModel.error.observe(on: self) { [weak self] error in
@@ -112,6 +114,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         viewModel.didSelect(item: items[indexPath.row])
     }
     

@@ -41,10 +41,10 @@ class UsersViewModel {
     let query: Observable<String> = Observable("")
     let error: Observable<String?> = Observable(nil)
     var isEmpty: Bool { return items.value.isEmpty }
-    let screenTitle = NSLocalizedString("Users", comment: "")
-    let emptyDataTitle = NSLocalizedString("Search users", comment: "")
-    let errorTitle = NSLocalizedString("Error", comment: "")
-    let searchBarPlaceholder = NSLocalizedString("Search users", comment: "")
+    let screenTitle = "Users"
+    let emptyDataTitle = "Nothing found"
+    let errorTitle = "Error"
+    let searchBarPlaceholder = "Search users"
 
     init(usersUseCase: UsersUseCase, imagesRepository: ImagesRepository,
          closures: UsersViewModelClosures? = nil) {
