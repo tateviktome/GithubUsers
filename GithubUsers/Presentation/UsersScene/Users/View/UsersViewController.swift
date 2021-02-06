@@ -15,22 +15,12 @@ final class UsersViewController: UIViewController {
     
     private var viewModel: UsersViewModel!
     private var items: [UserItemViewModel] = []
-//    private var posterImagesRepository: PosterImagesRepository?
     
     private var searchController = UISearchController(searchResultsController: nil)
-    
-//    static func create(with viewModel: UsersViewModel,
-//                       posterImagesRepository: PosterImagesRepository?) -> UsersViewController {
-//        let view = UsersViewController(nibName: "UsersViewController", bundle: nil)
-//        view.viewModel = viewModel
-////        view.posterImagesRepository = posterImagesRepository
-//        return view
-//    }
     
     static func create(with viewModel: UsersViewModel) -> UsersViewController {
         let view = UsersViewController(nibName: "UsersViewController", bundle: nil)
         view.viewModel = viewModel
-//        view.posterImagesRepository = posterImagesRepository
         return view
     }
 
